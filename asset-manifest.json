@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/cardgame/static/css/main.dc4d0011.css",
-    "main.js": "/cardgame/static/js/main.10aa9e77.js",
+    "main.css": "/cardgame/static/css/main.70245dba.css",
+    "main.js": "/cardgame/static/js/main.699ee2a3.js",
     "static/js/787.8e2c2a44.chunk.js": "/cardgame/static/js/787.8e2c2a44.chunk.js",
     "static/media/irelia.jpg": "/cardgame/static/media/irelia.25ea9c25db25abc77535.jpg",
     "static/media/aatrox.jpg": "/cardgame/static/media/aatrox.025e93cea08fb3b4fbe9.jpg",
+    "static/media/yone.jpg": "/cardgame/static/media/yone.4b8f6c623093cbb5c21e.jpg",
+    "static/media/ksante.jpg": "/cardgame/static/media/ksante.356f169ef44fa545c403.jpg",
     "static/media/behind.png": "/cardgame/static/media/behind.03389d9c6afcdf83d448.png",
+    "static/media/yasuo.jpg": "/cardgame/static/media/yasuo.f6d0683d94f28c520f04.jpg",
+    "static/media/zed.jpg": "/cardgame/static/media/zed.dc444d25c963bc08accf.jpg",
     "static/media/jhin.jpg": "/cardgame/static/media/jhin.7135de4ba147cefff2d0.jpg",
-    "static/media/logo.svg": "/cardgame/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/lessin.jpg": "/cardgame/static/media/lessin.23e2239a152ffb8b0333.jpg",
+    "static/media/nidalee.jpg": "/cardgame/static/media/nidalee.8cbf102b67dc28cba712.jpg",
     "index.html": "/cardgame/index.html",
-    "main.dc4d0011.css.map": "/cardgame/static/css/main.dc4d0011.css.map",
-    "main.10aa9e77.js.map": "/cardgame/static/js/main.10aa9e77.js.map",
+    "main.70245dba.css.map": "/cardgame/static/css/main.70245dba.css.map",
+    "main.699ee2a3.js.map": "/cardgame/static/js/main.699ee2a3.js.map",
     "787.8e2c2a44.chunk.js.map": "/cardgame/static/js/787.8e2c2a44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc4d0011.css",
-    "static/js/main.10aa9e77.js"
+    "static/css/main.70245dba.css",
+    "static/js/main.699ee2a3.js"
   ]
 }
