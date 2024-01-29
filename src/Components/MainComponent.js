@@ -6,6 +6,7 @@ import "../css/Card.css";
 const styleCards = {
   display: "flex",
   flexWrap: "wrap",
+  // justifyContent: "space-between",
 };
 
 const cardLOL = [
@@ -21,30 +22,30 @@ const cardLOL = [
     src: require(`../img_card/jhin.jpg`),
     matched: false,
   },
-  // {
-  //   src: require(`../img_card/ksante.jpg`),
-  //   matched: false,
-  // },
-  // {
-  //   src: require(`../img_card/lessin.jpg`),
-  //   matched: false,
-  // },
-  // {
-  //   src: require(`../img_card/nidalee.jpg`),
-  //   matched: false,
-  // },
-  // {
-  //   src: require(`../img_card/yasuo.jpg`),
-  //   matched: false,
-  // },
-  // {
-  //   src: require(`../img_card/yone.jpg`),
-  //   matched: false,
-  // },
-  // {
-  //   src: require(`../img_card/zed.jpg`),
-  //   matched: false,
-  // },
+  {
+    src: require(`../img_card/ksante.jpg`),
+    matched: false,
+  },
+  {
+    src: require(`../img_card/lessin.jpg`),
+    matched: false,
+  },
+  {
+    src: require(`../img_card/nidalee.jpg`),
+    matched: false,
+  },
+  {
+    src: require(`../img_card/yasuo.jpg`),
+    matched: false,
+  },
+  {
+    src: require(`../img_card/yone.jpg`),
+    matched: false,
+  },
+  {
+    src: require(`../img_card/zed.jpg`),
+    matched: false,
+  },
 ];
 function MainComponent() {
   const [cards, setCards] = useState([]);
@@ -63,25 +64,19 @@ function MainComponent() {
   };
 
   const handleChoice = (card) => {
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    if (!card.matched && card !== choiceOne && card !== choiceTwo) {
+      choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    }
   };
-
-  // const checkFlippedCards = () => {
-  //   const flippedCards = cards.every((card) => card.matched === true);
-  //   if (flippedCards) {
-  //     setTimeout(() => {
-  //       alert("Chúc mừng! Bạn đã lật hết thẻ!");
-  //       shuffleCards();
-  //     }, 600);
-  //   }
-  // };
-
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
     setTurn((preTurn) => preTurn + 1);
     setDisable(false);
     // checkFlippedCards();
+    setTimeout(() => {
+      setCards((prevCards) => prevCards.filter((card) => !card.matched));
+    }, 1000);
   };
 
   useEffect(() => {
@@ -92,7 +87,7 @@ function MainComponent() {
         setCards((preCards) => {
           return preCards.map((card) => {
             if (card.src === choiceOne.src) {
-              return { ...card, matched: true };
+              return { ...card, matched: true, hidden: true };
             } else {
               return card;
             }
@@ -113,7 +108,9 @@ function MainComponent() {
 
   return (
     <>
-      <button onClick={shuffleCards}>Play</button>
+      <button className="button_play" onClick={shuffleCards}>
+        PLAY AGAIN
+      </button>
       <div style={styleCards}>
         {cards.map((card) => (
           <Card
@@ -125,7 +122,7 @@ function MainComponent() {
           />
         ))}
       </div>
-      <div>Turns: {turn}</div>
+      <div>Turn: {turn}</div>
     </>
   );
 }

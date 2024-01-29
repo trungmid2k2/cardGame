@@ -5,7 +5,7 @@ import "../css/Card.css";
 const styleCard = {
   height: "210px",
   width: "150px",
-  padding: "10px 10px",
+  padding: "10px 5px",
   display: "block",
   borderRadius: "15px",
   objectFit: "cover",
@@ -18,15 +18,23 @@ export default function Card({ card, handleChoice, flipped, disable }) {
     }
   };
   return (
-    <div className="card">
+    <div
+      onCopy={(e) => {
+        e.preventDefault();
+        return false;
+      }}
+      className="card"
+    >
       <div className={flipped ? "flipped" : " "}>
         <img
+          onCopy="return false"
           className="front"
           style={styleCard}
           src={card.src}
           alt="front cảd"
         />
         <img
+          onCopy="return false"
           className="back"
           style={styleCard}
           onClick={handleClick}

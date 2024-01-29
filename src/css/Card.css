@@ -25,3 +25,15 @@ position: relative;
     transform: rotateY(90deg);
     transition-delay: 0s ;
 }
+.button_play{
+    padding: 10px 40px;
+    background-color: rgb(11, 196, 226);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.button_play:hover{
+    opacity: 0.9;
+
+}

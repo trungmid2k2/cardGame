@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import imgAatrox from './img_card/aatrox.jpg'
-import MainComponent from './Components/MainComponent';
+import "./App.css";
+import MainComponent from "./Components/MainComponent";
 function App() {
   return (
     <div className="App">
