@@ -9,6 +9,7 @@ const styleCard = {
   display: "block",
   borderRadius: "15px",
   objectFit: "cover",
+  // visibility: "visible",
 };
 
 export default function Card({ card, handleChoice, flipped, disable }) {
@@ -18,25 +19,19 @@ export default function Card({ card, handleChoice, flipped, disable }) {
     }
   };
   return (
-    <div
-      onCopy={(e) => {
-        e.preventDefault();
-        return false;
-      }}
-      className="card"
-    >
+    <div className="card">
       <div className={flipped ? "flipped" : " "}>
         <img
-          onCopy="return false"
+          // onCopy="return false"
           className="front"
-          style={styleCard}
+          style={{ ...styleCard, visibility: card.visibility }}
           src={card.src}
           alt="front cảd"
         />
         <img
-          onCopy="return false"
+          // onCopy="return false"
           className="back"
-          style={styleCard}
+          style={{ ...styleCard, visibility: card.visibility }}
           onClick={handleClick}
           src={behind}
           alt="back cảd"

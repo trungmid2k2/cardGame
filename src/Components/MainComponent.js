@@ -13,38 +13,47 @@ const cardLOL = [
   {
     src: require(`../img_card/aatrox.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/irelia.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/jhin.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/ksante.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/lessin.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/nidalee.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/yasuo.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/yone.jpg`),
     matched: false,
+    visibility: "visible",
   },
   {
     src: require(`../img_card/zed.jpg`),
     matched: false,
+    visibility: "visible",
   },
 ];
 function MainComponent() {
@@ -75,8 +84,12 @@ function MainComponent() {
     setDisable(false);
     // checkFlippedCards();
     setTimeout(() => {
-      setCards((prevCards) => prevCards.filter((card) => !card.matched));
-    }, 1000);
+      setCards((prevCards) =>
+        prevCards.map((card) =>
+          card.matched ? { ...card, visibility: "hidden" } : card
+        )
+      );
+    }, 500);
   };
 
   useEffect(() => {
